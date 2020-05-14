@@ -1,4 +1,5 @@
 package com.lindiso.roulette.rouletteapp.service;
 
-public class RouletteService {
+public interface RouletteService {
+   float convertKelvinToCelsius(float kelvin);
 }
