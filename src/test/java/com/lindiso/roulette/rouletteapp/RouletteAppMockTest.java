@@ -37,4 +37,12 @@ public class RouletteAppMockTest {
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
+    @Test
+    public void convertCelsiusToKelvinTest() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.patch("/roulette/conversions/ctok").accept(MediaType.APPLICATION_JSON_VALUE)
+                .contentType(MediaType.parseMediaType("application/json"))
+                .param("celsius", "10.0"))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
 }
