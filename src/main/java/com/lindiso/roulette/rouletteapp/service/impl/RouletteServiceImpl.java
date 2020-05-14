@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class RouletteServiceImpl implements RouletteService {
 
+    private static double MILES_CONST_AMOUNT = 1.60934;
+    private static double KILOMETERS_CONST_AMOUNT = 0.621371;
+
     @Override
     public float convertKelvinToCelsius(float kelvin) {
         float celsius = kelvin - 273.15F;
@@ -17,4 +20,10 @@ public class RouletteServiceImpl implements RouletteService {
         float kelvin = celsius + 273.15F;
         return kelvin;
     }
+    @Override
+    public double convertMilesToKilometers(double miles) {
+        double kilometers = miles * MILES_CONST_AMOUNT ;
+        return kilometers;
+    }
+
 }

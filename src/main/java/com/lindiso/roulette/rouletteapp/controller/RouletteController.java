@@ -30,4 +30,12 @@ public class RouletteController {
         }
         return  new Float(0);
     }
+
+    @RequestMapping(value = "/conversions/mtok")
+    public double getConvertMilesToKilometers(@RequestParam("miles") double miles){
+        if (rouletteService != null){
+            return rouletteService.convertMilesToKilometers(miles);
+        }
+        return  new Double(0);
+    }
 }
