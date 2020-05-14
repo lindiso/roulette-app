@@ -25,5 +25,10 @@ public class RouletteServiceImpl implements RouletteService {
         double kilometers = miles * MILES_CONST_AMOUNT ;
         return kilometers;
     }
+    @Override
+    public double convertKilometersToMiles(double kilometers) {
+        double miles = kilometers * KILOMETERS_CONST_AMOUNT ;
+        return miles;
+    }
 
 }

@@ -6,4 +6,6 @@ public interface RouletteService {
    float convertCelsiusToKelvin(float celsius);
 
    double convertMilesToKilometers(double miles);
+
+   double convertKilometersToMiles(double kilometers);
 }

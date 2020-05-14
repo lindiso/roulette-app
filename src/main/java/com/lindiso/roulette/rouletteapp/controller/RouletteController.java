@@ -38,4 +38,12 @@ public class RouletteController {
         }
         return  new Double(0);
     }
+
+    @RequestMapping(value = "/conversions/ktom")
+    public double getConvertKilometersToMiles(@RequestParam("kilometers") double kilometers){
+        if (rouletteService != null){
+            return rouletteService.convertKilometersToMiles(kilometers);
+        }
+        return  new Double(0);
+    }
 }
