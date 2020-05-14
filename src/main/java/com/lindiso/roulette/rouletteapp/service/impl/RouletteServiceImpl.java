@@ -12,4 +12,9 @@ public class RouletteServiceImpl implements RouletteService {
         float celsius = kelvin - 273.15F;
        return celsius;
     }
+    @Override
+    public float convertCelsiusToKelvin(float celsius) {
+        float kelvin = celsius + 273.15F;
+        return kelvin;
+    }
 }

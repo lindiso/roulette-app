@@ -22,4 +22,12 @@ public class RouletteController {
         }
         return  new Float(0);
     }
+
+    @RequestMapping(value = "/conversions/ctok")
+    public float getConvertCelsiusToKelvin(@RequestParam("celsius") float celsius){
+        if (rouletteService != null){
+            return rouletteService.convertCelsiusToKelvin(celsius);
+        }
+        return  new Float(0);
+    }
 }
