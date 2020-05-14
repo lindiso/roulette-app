@@ -53,4 +53,12 @@ public class RouletteAppMockTest {
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
+    @Test
+    public void convertKilometersToMilesTest() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.patch("/roulette/conversions/ktom").accept(MediaType.APPLICATION_JSON_VALUE)
+                .contentType(MediaType.parseMediaType("application/json"))
+                .param("kilometers", "10.0"))
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
 }
